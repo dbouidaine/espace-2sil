@@ -53,7 +53,7 @@ public class PaymentServiceTest {
         List<Product> ListProduit=new ArrayList<>();
         ListProduit.add(produit1);
         ListProduit.add(produit2);
-        Customer client=new Customer(2L,"Boucherir","Zineddine");
+        Customer client=new Customer(2L,"Bouidaine","Diaeddin");
         Cart cart=new Cart(ListProduit,client);
         Date d1=new Date(2020,Calendar.DECEMBER,15);
         Date d2=new Date(2020,Calendar.DECEMBER,18);
