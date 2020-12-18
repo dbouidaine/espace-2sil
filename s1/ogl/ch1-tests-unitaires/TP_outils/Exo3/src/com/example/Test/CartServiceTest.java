@@ -11,9 +11,8 @@ import org.mockito.Mockito;
 import static org.junit.Assert.*;
 
 public class CartServiceTest {
-
     @Test
-    public void addProductToCart() {
+    public void addProductToCart1() {
         /* cette méthode permet de tester la partie de la méthode addProductToCart
      dans le cas ou la quantité de produit<= quantité du Stock */
 
@@ -34,11 +33,11 @@ public class CartServiceTest {
         assertTrue(cartService.addProductToCart(produit,client));
     }
     @Test
-    public void addProductToCart1() {
+    public void addProductToCart2() {
         /* cette méthode permet de tester la partie de la méthode addProductToCart
      dans le cas ou la quantité de produit>quantité du Stock */
         Product produit=new Product("20201812","Téléphone prtable","Iphone 12",20, 2500000L);
-        Customer client=new Customer(1L,"Boucherir","Zineddine");
+        Customer client=new Customer(1L,"Bouidaine","Diaeddin");
         IProductDao mockProductDao= Mockito.mock(IProductDao.class);
         ICartDao mockCardDao= Mockito.mock(ICartDao.class);
         Mockito.when(mockCardDao.addProductToCart(produit,client)).thenReturn(true);
