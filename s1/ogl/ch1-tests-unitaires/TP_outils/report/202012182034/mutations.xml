@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mutations>
+<mutation detected='false' status='SURVIVED' numberOfTestsRun='1'><sourceFile>PaymentServiceTest.java</sourceFile><mutatedClass>com.example.Test.PaymentServiceTest</mutatedClass><mutatedMethod>addPayment1</mutatedMethod><methodDescription>()V</methodDescription><lineNumber>35</lineNumber><mutator>org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator</mutator><index>134</index><block>23</block><killingTest/><description>removed call to org/junit/Assert::assertTrue</description></mutation>
+<mutation detected='false' status='SURVIVED' numberOfTestsRun='1'><sourceFile>PaymentServiceTest.java</sourceFile><mutatedClass>com.example.Test.PaymentServiceTest</mutatedClass><mutatedMethod>addPayment2</mutatedMethod><methodDescription>()V</methodDescription><lineNumber>54</lineNumber><mutator>org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator</mutator><index>134</index><block>23</block><killingTest/><description>removed call to org/junit/Assert::assertFalse</description></mutation>
+</mutations>
