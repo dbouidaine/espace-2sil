@@ -1,34 +1,35 @@
-package com.example.Test;
+package com.example.test;
 
 import com.example.model.City;
 import com.example.service.DatabaseConnection;
+import com.example.service.DatabaseService;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
-
+import static org.junit.Assert.*;
 import java.sql.Connection;
 
-import static org.junit.Assert.*;
+public class CityTest {
+    static DatabaseConnection connection =
+            new DatabaseConnection("sa","","org.h2.Driver","jdbc:h2:mem:test");
+    static Connection connect;
 
-public class DatabaseServiceTest {
-    static DatabaseConnection databaseConnection=new DatabaseConnection("sa","","org.h2.Driver","jdbc:h2:mem:test");
-    static Connection connection;
     @BeforeClass
-    public static void DBConnection(){
-        databaseConnection.createDb(connection);
-        databaseConnection.connect();
-    }
-    @Test
-    public void addCity() {
-        City city=new City(1,"Hebro",100000,"Hebro est une ville palestinienne");
-
+    public static void DatabaseConnection(){
+        connect = connection.connect();
+        connection.createDb(connect);
     }
 
     @Test
-    public void getCity() {
+    public void setGetCity(){
+        City new_city = new City(1,"Alger",1,"A new city");
+        DatabaseService.addCity(CityTest.connect,new_city);
+        City db_city = DatabaseService.getCity(connect,1);
+        assertTrue(new_city.equals(db_city));
     }
+
     @AfterClass
-    public static void BDDisconnection(){
-        databaseConnection.disconnect(connection);
+    public static void DatabaseDisconnection(){
+        connection.disconnect(connect);
     }
 }
