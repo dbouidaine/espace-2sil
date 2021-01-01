@@ -31,8 +31,8 @@ public class Exo1 {
 		Car.click();
 		WebElement Toyota = driver.findElement(By.xpath("//p[@class='b-guidancecard__title'][text()='Toyota']"));
 		Toyota.click();
-		driver.manage().timeouts(). implicitlyWait(10, TimeUnit.SECONDS);
 		WebElement nbrProduit=driver.findElement(By.xpath("//h2[@class='srp-controls__count-heading']"));
+		driver.manage().timeouts(). implicitlyWait(10, TimeUnit.SECONDS);
 		assertEquals(nbrProduit.getText(),"1-7 of 7 Results");
 	}
 
