@@ -1,11 +1,14 @@
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
+import org.junit.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+
 import java.util.concurrent.TimeUnit;
+
 import static org.junit.Assert.assertEquals;
 
 
@@ -33,7 +36,7 @@ public class Exo1 {
 		Toyota.click();
 		WebElement nbrProduit=driver.findElement(By.xpath("//h2[@class='srp-controls__count-heading']"));
 		driver.manage().timeouts(). implicitlyWait(10, TimeUnit.SECONDS);
-		assertEquals(nbrProduit.getText(),"1-7 of 7 Results");
+		assertEquals(nbrProduit.getText(),"1-8 of 8 Results");
 	}
 
 	@AfterClass
