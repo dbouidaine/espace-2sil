@@ -9,7 +9,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import static org.junit.Assert.*;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features = "Features/Exo2.feature")
+@CucumberOptions(features = "Features/Exo2.feature", plugin ={"pretty", "html:report"})
 public class Exo2Test {
 
 }
